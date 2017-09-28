@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         DBHandler db = new DBHandler(this);
 
         // compter le nombre de films
-        Log.d("Count", "" + db.getMoviesCount());
+        //Log.d("Count", "" + db.getMoviesCount());
 
         // ajouter des films
         db.addMovie(new Movie("Matrix", "Super film", 3));
@@ -24,14 +24,14 @@ public class MainActivity extends AppCompatActivity {
         db.addMovie(new Movie("Interstellar", "Genial", 5));
 
         // mettre à jour un film
-        db.updateMovie(new Movie(44, "Le Roi Lion", "Sympa", 5));
+        //db.updateMovie(new Movie(44, "Le Roi Lion", "Sympa", 5));
 
 
         // supprimer un film
-        db.deleteMovie(new Movie(1434));
+        //db.deleteMovie(new Movie(1434));
 
         // récupérer un film
-        Log.d("film", "" + db.getMovie(2323));
+        //Log.d("film", "" + db.getMovie(2323));
 
 
         // récupérer les films
