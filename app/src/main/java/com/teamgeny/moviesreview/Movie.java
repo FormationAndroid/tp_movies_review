@@ -14,15 +14,15 @@ class Movie {
         this.rate = rate;
     }
 
+    Movie(long id) {
+        this.id = id;
+    }
+
     Movie(int id, String title, String commentary, int rate) {
         this.id = id;
         this.title = title;
         this.commentary = commentary;
         this.rate = rate;
-    }
-
-    void setId(int id) {
-        this.id = id;
     }
 
     void setTitle(String title) {
@@ -35,6 +35,10 @@ class Movie {
 
     long getId() {
         return id;
+    }
+
+    void setId(long id) {
+        this.id = id;
     }
 
     String getCommentary() {

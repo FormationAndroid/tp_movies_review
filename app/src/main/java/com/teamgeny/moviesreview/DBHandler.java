@@ -88,9 +88,7 @@ class DBHandler extends SQLiteOpenHelper {
                 MovieList.add(Movie);
             } while (cursor.moveToNext());
         }
-
         cursor.close();
-
         return MovieList;
     }
 
@@ -104,14 +102,11 @@ class DBHandler extends SQLiteOpenHelper {
 
     int updateMovie(Movie Movie) {
         SQLiteDatabase db = this.getWritableDatabase();
-
         ContentValues values = new ContentValues();
         values.put(KEY_TITLE, Movie.getTitle());
         values.put(KEY_COMMENTARY, Movie.getCommentary());
         values.put(KEY_RATE, Movie.getRate());
-
-        return db.update(TABLE_MOVIES, values, KEY_ID + " = ?",
-                new String[]{String.valueOf(Movie.getId())});
+        return db.update(TABLE_MOVIES, values, KEY_ID + " = ?", new String[]{String.valueOf(Movie.getId())});
     }
 
     void deleteMovie(Movie Movie) {
