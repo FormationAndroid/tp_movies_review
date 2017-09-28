@@ -30,6 +30,10 @@ public class MainActivity extends AppCompatActivity {
         // supprimer un film
         db.deleteMovie(new Movie(1434));
 
+        // récupérer un film
+        Log.d("film", "" + db.getMovie(2323));
+
+
         // récupérer les films
         List<Movie> Movies = db.getAllMovies();
         for (Movie Movie : Movies) {
