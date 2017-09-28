@@ -84,6 +84,7 @@ class DBHandler extends SQLiteOpenHelper {
                 Movie.setId(Integer.parseInt(cursor.getString(0)));
                 Movie.setTitle(cursor.getString(1));
                 Movie.setCommentary(cursor.getString(2));
+                Movie.setRate(cursor.getInt(3));
                 MovieList.add(Movie);
             } while (cursor.moveToNext());
         }

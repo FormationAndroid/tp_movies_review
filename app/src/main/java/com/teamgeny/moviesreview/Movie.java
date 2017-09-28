@@ -6,19 +6,15 @@ class Movie {
     private String title, commentary;
     private int rate;
 
-    Movie() {
+    Movie() {}
 
-    }
-
-    Movie(String title, String commentary, int rate)
-    {
+    Movie(String title, String commentary, int rate) {
         this.title = title;
         this.commentary = commentary;
         this.rate = rate;
     }
 
-    Movie(int id, String title, String commentary, int rate)
-    {
+    Movie(int id, String title, String commentary, int rate) {
         this.id = id;
         this.title = title;
         this.commentary = commentary;
@@ -47,10 +43,6 @@ class Movie {
 
     String getTitle() {
         return title;
-    }
-
-    public void setId(long id) {
-        this.id = id;
     }
 
     int getRate() {
