@@ -26,12 +26,12 @@ class DBHandler extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String CREATE_CONTACTS_TABLE = "CREATE TABLE " + TABLE_MOVIES + "("
+        String CREATE_movieS_TABLE = "CREATE TABLE " + TABLE_MOVIES + "("
                 + KEY_ID + " INTEGER PRIMARY KEY,"
                 + KEY_TITLE + " TEXT,"
                 + KEY_COMMENTARY + " TEXT,"
                 + KEY_RATE + " INTEGER" + ")";
-        db.execSQL(CREATE_CONTACTS_TABLE);
+        db.execSQL(CREATE_movieS_TABLE);
     }
 
     @Override
@@ -73,11 +73,11 @@ class DBHandler extends SQLiteOpenHelper {
                 new String[]{String.valueOf(id)}, null, null, null, null);
         if (cursor != null)
             cursor.moveToFirst();
-        Movie contact = new Movie(Integer.parseInt(cursor.getString(0)),
+        Movie movie = new Movie(Integer.parseInt(cursor.getString(0)),
                 cursor.getString(1), cursor.getString(2), cursor.getInt(3));
         cursor.close();
 
-        return contact;
+        return movie;
     }
 
     List<Movie> getAllMovies() {
